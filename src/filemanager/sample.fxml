@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.cell.TextFieldTreeCell?>
+<?import javafx.scene.control.cell.TextFieldListCell?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" id="BorderPane" prefHeight="400" prefWidth="800" fx:controller="filemanager.Controller">
+
+    <left>
+        <TreeView fx:id="treeView" prefWidth="600"/>
+    </left>
+    <right>
+
+        <VBox id="VBOX" spacing="10" BorderPane.alignment="TOP_RIGHT" minWidth="250">
+
+            <children>
+
+                <Button id="loadButton"   prefWidth="220" text="Choose Directory!" onAction="#load"  />
+
+                <Button id="deleteButton" prefWidth="220" text="Delete!" onAction="#delete" />
+                <TextField fx:id="inputArea"  promptText="Insert name of a file/folder!" maxWidth="220"/>
+                <Button id="addFileButton" prefWidth="220" text="Add File!" onAction="#addFile" />
+                <Button id="addDirButton" prefWidth="220" text="Add Directory!" onAction="#addDir" />
+
+
+            </children>
+
+        </VBox>
+
+    </right>
+</BorderPane>
